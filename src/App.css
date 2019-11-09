@@ -20,3 +20,38 @@
 .App-link {
   color: #09d3ac;
 }
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.Container h1 {
+  color: blue;
+}
+.Mainbar {
+  height: 50px;
+  margin-top: 0px;
+  background-color: lightblue;
+  display:table;
+  width:100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.Mainbar h2 {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 7%;
+  color: white;
+}
+.FilterBar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px;
+}
+.PhotoSection {
+  width: 100%;
+}

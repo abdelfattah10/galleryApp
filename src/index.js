@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import { createStore, applyMiddleware } from 'redux';
+import { configureStore } from 'redux-starter-kit';
+import { Provider } from 'react-redux';
+import createSagaMiddleare from 'redux-saga';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import sagas from './sagas';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import galleryReducer from './reducers/galleryReducer';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
+const sagaMiddleware = createSagaMiddleare();
+
+
+//const store = createStore(galleryReducer, applyMiddleware(sagaMiddleware));
+const store = configureStore({
+  reducer: galleryReducer,
+  middleware: [sagaMiddleware]
+})
+
+sagaMiddleware.run(sagas);
+
+ReactDOM.render( <Provider store={store}>
+                    <App/>
+                 </Provider>
+                 ,document.getElementById('root')
+               );
+
 serviceWorker.unregister();
