@@ -2,24 +2,6 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-// class Photo extends Component {
-//
-//   componentDidMount(){
-//     this.props.requestPhoto(this.props.match.params.photo_id);
-//   }
-//   render(){
-//     console.log(this.props.selected);
-//     return (
-//       <div className="PhotoSection">
-//         {this.props.selected.url && <img src={`${this.props.selected.url}`} style={{width: '100%', maxWidth: '600px'}}/>}
-//         <div style={{ float: 'right', marginRight: '20%'}}>
-//           <h3>{this.props.selected.title}</h3>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
-
 function Photo(props){
 
   useEffect(() => {

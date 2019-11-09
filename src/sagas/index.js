@@ -1,5 +1,4 @@
 import { takeEvery, all } from 'redux-saga/effects';
-
 import { fetchGallery, fetchPhoto } from './sagas';
 
 export default function* root() {

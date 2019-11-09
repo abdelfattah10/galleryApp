@@ -14,24 +14,8 @@ function filterByCategoty(gallery, categoryID){
   }
 }
 
-// class Gallery extends Component {
-//
-//   componentDidMount(){
-//     this.props.requestGallery();
-//   }
-//
-//   render(){
-//     return (
-//       <div className="Container">
-//         <FilterBar/>
-//         {this.props.gallery.length > 0 ? this.props.gallery.map( photo => <Card key={photo.id} photo={photo}/> ) : null}
-//       </div>
-//     )
-//   }
-// }
 
 function Gallery(props){
-
   useEffect(() => {
     props.requestGallery()
   }, []);
@@ -43,7 +27,6 @@ function Gallery(props){
     </div>
   )
 }
-
 
 
 const mapStateToProps = ({gallery}, props) => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import { createStore, applyMiddleware } from 'redux';
 import { configureStore } from 'redux-starter-kit';
 import { Provider } from 'react-redux';
 import createSagaMiddleare from 'redux-saga';
@@ -14,8 +13,6 @@ import galleryReducer from './reducers/galleryReducer';
 
 const sagaMiddleware = createSagaMiddleare();
 
-
-//const store = createStore(galleryReducer, applyMiddleware(sagaMiddleware));
 const store = configureStore({
   reducer: galleryReducer,
   middleware: [sagaMiddleware]

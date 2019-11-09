@@ -7,7 +7,6 @@ import * as actions from '../actions';
 import { getParams } from '../utils.js';
 
 
-
 function removeDuplicates(arr, comp) {
   const unique = arr
     .map(e => e[comp])
@@ -17,10 +16,10 @@ function removeDuplicates(arr, comp) {
 }
 
 class FilterBar extends Component {
-
   state = {
     activeNumber: 0
   }
+
   static getDerivedStateFromProps(nextProps, prevState) {
     return {
       activeNumber: getParams(nextProps.location).category
