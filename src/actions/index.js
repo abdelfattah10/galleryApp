@@ -21,3 +21,5 @@ export function requestPhoto(id) {
 export function receivePhoto(photo) {
   return photoFetchSuccess(photo);
 }
+
+//
