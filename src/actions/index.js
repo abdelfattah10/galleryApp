@@ -18,8 +18,8 @@ export function requestPhoto(id) {
   return photoFetchReq(id);
 }
 
-export function receivePhoto(photo) {
-  return photoFetchSuccess(photo);
+export function receivePhoto(data) {
+  return photoFetchSuccess(data);
 }
 
 //
